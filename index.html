@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>جيستوك — تسيير المحل من جيبك</title>
-<meta name="description" content="جيستوك: تطبيق تسيير المخزون والمبيعات للمحلات الجزائرية. يخدم بلا انترنت، دفعة وحدة مدى الحياة، بلا اشتراك شهري." />
+<title>جيستوك — تطبيق تسيير الأحذية بالجملة</title>
+<meta name="description" content="جيستوك: تطبيق لتجار الأحذية بالجملة في الجزائر. تابع الموديلات، الكراتين، المقاسات، المبيعات والأرباح. يخدم بلا انترنت، دفعة واحدة مدى الحياة." />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'/%3E%3Cpolyline points='3.27 6.96 12 12.01 20.73 6.96'/%3E%3Cline x1='12' y1='22.08' x2='12' y2='12'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -110,31 +110,9 @@
   .trial-note{margin-top:20px;font-size:13.5px;color:var(--text-faint);display:flex;align-items:center;gap:8px;}
   .trial-note svg{width:15px;height:15px;stroke:var(--amber);flex-shrink:0;}
 
-  /* ---------- hero visual: phone mock ---------- */
-  .phone-mock{
-    position:relative;
-    background:linear-gradient(160deg,var(--surface-2),var(--surface));
-    border:1px solid var(--line);
-    border-radius:28px;
-    padding:18px;
-    box-shadow:0 30px 70px -25px rgba(0,0,0,.65);
-    max-width:340px;margin-inline-start:auto;
-  }
-  @media (max-width:900px){ .phone-mock{margin-inline:auto;} }
-  .phone-mock-inner{
-    background:var(--bg-soft);border-radius:18px;border:1px solid var(--line);
-    padding:18px;font-size:12px;
-  }
-  .mock-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
-  .mock-title{font-weight:800;font-size:14px;}
-  .mock-pill{background:rgba(18,196,139,.14);color:var(--emerald);font-weight:700;font-size:10.5px;padding:4px 9px;border-radius:999px;}
-  .mock-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;}
-  .mock-card-row{display:flex;justify-content:space-between;align-items:center;}
-  .mock-label{color:var(--text-faint);font-size:11px;}
-  .mock-value{font-weight:800;font-size:15px;}
-  .mock-value.pos{color:var(--emerald);}
-  .mock-bars{display:flex;align-items:flex-end;gap:6px;height:54px;margin-top:10px;}
-  .mock-bars span{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(180deg,var(--emerald),var(--emerald-deep));}
+  /* ---------- hero video ---------- */
+  .hero-video{max-width:none;}
+  @media (max-width:900px){ .hero-video{margin-top:4px;} }
 
   /* ---------- stats bar ---------- */
   .stats-bar{
@@ -179,6 +157,29 @@
   .feat-card.tone-amber .feat-icon svg{stroke:var(--amber);}
   .feat-card h3{font-size:17px;font-weight:800;margin-bottom:8px;}
   .feat-card p{color:var(--text-dim);font-size:14.5px;}
+
+  /* ---------- pricing ---------- */
+  /* ---------- video ---------- */
+  .video-section{padding:96px 0;}
+  .video-frame{
+    position:relative;width:100%;max-width:820px;margin:0 auto;
+    aspect-ratio:16/9;border-radius:20px;overflow:hidden;
+    border:1px solid var(--line);box-shadow:0 30px 70px -25px rgba(0,0,0,.6);
+    background:var(--surface);
+  }
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .video-section .section-head{margin:0 auto 40px;text-align:center;}
+
+  /* ---------- fit-for-you ---------- */
+  .fit{padding:96px 0;background:var(--bg-soft);border-top:1px solid var(--line);}
+  .fit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:860px;}
+  @media (max-width:700px){ .fit-grid{grid-template-columns:1fr;} }
+  .fit-item{
+    display:flex;align-items:flex-start;gap:12px;
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;font-size:15px;font-weight:600;
+  }
+  .fit-item svg{width:20px;height:20px;stroke:var(--emerald);flex-shrink:0;margin-top:2px;}
 
   /* ---------- pricing ---------- */
   .pricing{padding:96px 0;background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
@@ -252,6 +253,7 @@
     </div>
     <nav class="nav-links">
       <a href="#features">المميزات</a>
+      <a href="#fit">هل هو ليك؟</a>
       <a href="#pricing">الأسعار</a>
       <a href="#download">تحميل</a>
     </nav>
@@ -265,11 +267,11 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow-line"><span class="eyebrow-dot"></span> مصمم خصيصاً للمحلات الجزائرية</div>
-        <h1>تسيير المخزون والمبيعات، <span class="accent">من جيبك</span>، بلا نت</h1>
+        <div class="eyebrow-line"><span class="eyebrow-dot"></span> مصمم لتجار الأحذية بالجملة في الجزائر</div>
+        <h1>كل موديلاتك، كراتينك، مقاساتك <span class="accent">وأرباحك</span> في تطبيق واحد</h1>
         <p class="hero-sub">
-          جيستوك يجمعلك المخزون، الصندوق، الزبائن، والأرباح في تطبيق وحد بسيط.
-          يخدم بلا انترنت، وتقدر تزيد المزامنة السحابية إذا حبيت تخدم من بلاصة وحدة بجهاز وحد
+          جيستوك يعرّف مخزونك بالكرتون، مبيعاتك وأرباحك — بلا دفاتر ولا حسابات يدوية.
+          يخدم بلا انترنت، وتقدر تزيد المزامنة السحابية إذا حبيت تخدم من مكان واحد بجهاز واحد
           أو من عدة أجهزة في نفس الوقت.
         </p>
         <div class="hero-ctas">
@@ -279,7 +281,7 @@
           </button>
           <button class="btn btn-ghost" id="cta-ios">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l-7-7 7-7M19 12H5"/></svg>
-            <span>طلب نسخة iOS<small>راسلنا للانضمام</small></span>
+            <span>طلب نسخة iOS<small>راسلنا على واتساب</small></span>
           </button>
         </div>
         <div class="trial-note">
@@ -288,36 +290,15 @@
         </div>
       </div>
 
-      <div class="phone-mock" aria-hidden="true">
-        <div class="phone-mock-inner">
-          <div class="mock-row">
-            <span class="mock-title">لوحة التحكم</span>
-            <span class="mock-pill">اليوم</span>
-          </div>
-          <div class="mock-card">
-            <div class="mock-card-row">
-              <span class="mock-label">الربح المقدر</span>
-              <span class="mock-value pos">+42,600 د.ج</span>
-            </div>
-          </div>
-          <div class="mock-card">
-            <div class="mock-card-row">
-              <span class="mock-label">مبيعات اليوم</span>
-              <span class="mock-value">18 عملية</span>
-            </div>
-            <div class="mock-bars">
-              <span style="height:35%"></span><span style="height:55%"></span><span style="height:40%"></span>
-              <span style="height:80%"></span><span style="height:60%"></span><span style="height:95%"></span>
-              <span style="height:50%"></span>
-            </div>
-          </div>
-          <div class="mock-card">
-            <div class="mock-card-row">
-              <span class="mock-label">تنبيه مخزون</span>
-              <span class="mock-value" style="color:var(--amber);font-size:12px;">3 موديلات قاربت تخلص</span>
-            </div>
-          </div>
-        </div>
+      <div class="video-frame hero-video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/j-OeuCYU08U"
+          title="شاهد كيفاش جيستوك يخدم لتاجر الأحذية بالجملة"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
   </section>
@@ -345,8 +326,8 @@
     <div class="wrap">
       <div class="section-head">
         <div class="section-kicker">المميزات</div>
-        <h2>كلشي محتاجو تاجر يسيّر محله</h2>
-        <p>ما بنيناش جيستوك على قياس أي بيزنس — بنيناه لتاجر الجزائر بالضبط: يبيع بالجملة والتفصيل، ياخد الدفع عند التسليم، ويحتاج يخدم حتى بلا نت.</p>
+        <h2>كل ما يحتاجه تاجر الأحذية بالجملة</h2>
+        <p>ما صممناش جيستوك على قياس أي بيزنس — صممناه لتاجر الأحذية بالجملة بالضبط: ديبو تاعك بين يديك .</p>
       </div>
 
       <div class="feat-grid">
@@ -354,7 +335,7 @@
           <div class="feat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/></svg>
           </div>
-          <h3>مخزون بالكرتون والزوج مع صور المنتجات</h3>
+          <h3>تبع المخزون تاعك باسهل طريقة</h3>
           <p>تسجل السلعة بعدد الكراتين، عدد القطع في الكرتون، وسعر الوحدة — والتطبيق يحسبلك سعر الكرتون تلقائياً. زيد صورة لكل موديل من كاميرا الهاتف مباشرة، وتنبيه فوري لما مخزون منتج يقارب يخلص.</p>
         </div>
 
@@ -362,8 +343,8 @@
           <div class="feat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           </div>
-          <h3>صندوق بيع كامل</h3>
-          <p>سلة متعددة المنتجات، بيع بالكرتون أو بالزوج، وتتبع حالة كل طلبية من الانتظار للتوصيل.</p>
+          <h3>  سجل مبيعاتك و تتبعها</h3>
+          <p>سلة متعددة المنتجات، بيع بالكرتون ، وتتبع حالة كل طلبية من الانتظار للتوصيل مع تراكينغ الخاص بكل طلبية.</p>
         </div>
 
         <div class="feat-card tone-amber">
@@ -386,7 +367,7 @@
           <div class="feat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3>تطبيق مخصص للموظفين</h3>
+          <h3>تطبيق مخصص للديبو تاعك</h3>
           <p>نسخة ثانية بصلاحيات محدودة (مخزون ومبيعات فقط) لعمال المستودع، بلا ما يشوفوا أرباحك.</p>
         </div>
 
@@ -394,9 +375,27 @@
           <div class="feat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <h3>دفعة وحدة، ملكك مدى الحياة</h3>
-          <p>ما فيه اشتراك شهري ولا تجديد. تخلص مرة وحدة، ونطبيق يبقى يخدم عندك.</p>
+          <h3>دفعة واحدة، ملكك مدى الحياة</h3>
+          <p>ما فيه اشتراك شهري ولا تجديد. تخلص مرة واحدة، والتطبيق يبقى يخدم عندك.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIT FOR YOU -->
+  <section class="fit" id="fit">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-kicker">هل هو ليك؟</div>
+        <h2>جيستوك مناسب لك إذا كنت:</h2>
+      </div>
+      <div class="fit-grid">
+        <div class="fit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> تبيع الأحذية بالجملة</div>
+        <div class="fit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> تشتغل بالكراتين والمقاسات</div>
+        <div class="fit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> عندك عدة موديلات وألوان</div>
+        <div class="fit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> تحتاج تعرف الكمية المتبقية بسرعة</div>
+        <div class="fit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> تحب تتابع المبيعات والأرباح</div>
+        <div class="fit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> تريد تطبيقاً يعمل حتى بدون إنترنت</div>
       </div>
     </div>
   </section>
@@ -406,7 +405,7 @@
     <div class="wrap">
       <div class="section-head">
         <div class="section-kicker">الأسعار</div>
-        <h2>دفعة وحدة، بلا اشتراك شهري</h2>
+        <h2>دفعة واحدة، بلا اشتراك شهري</h2>
         <p>اختار حسب حاجتك: تطبيق وحده بلا نت، أو مع مزامنة سحابية، أو العرض الكامل مع تطبيق الموظفين.</p>
       </div>
 
@@ -416,7 +415,7 @@
           <div class="price-name">أساسي</div>
           <div class="price-desc">التطبيق الرئيسي وحده، يخدم بلا انترنت بالكامل.</div>
           <div class="price-amount"><span class="num">7,000</span><span class="cur">د.ج</span></div>
-          <div class="price-once">دفعة وحدة، مدى الحياة</div>
+          <div class="price-once">دفعة واحدة، مدى الحياة</div>
           <ul class="price-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> إدارة المخزون والمبيعات</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> إحصائيات وتقارير كاملة</li>
@@ -429,7 +428,7 @@
           <div class="price-name">أونلاين</div>
           <div class="price-desc">نفس التطبيق، مع مزامنة سحابية مجانية عبر جوجل شيت.</div>
           <div class="price-amount"><span class="num">10,000</span><span class="cur">د.ج</span></div>
-          <div class="price-once">دفعة وحدة، مدى الحياة</div>
+          <div class="price-once">دفعة واحدة، مدى الحياة</div>
           <ul class="price-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> كلشي في العرض الأساسي</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> مزامنة سحابية بين أجهزتك</li>
@@ -443,10 +442,10 @@
           <div class="price-name">العرض الكامل</div>
           <div class="price-desc">كل شيء، بالإضافة لتطبيق ثاني للموظفين.</div>
           <div class="price-amount"><span class="num">15,000</span><span class="cur">د.ج</span></div>
-          <div class="price-once">دفعة وحدة، مدى الحياة</div>
+          <div class="price-once">دفعة واحدة، مدى الحياة</div>
           <ul class="price-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> كلشي في عرض الأونلاين</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> تطبيق ثاني لعمال المستودع لحقن الطلبات</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> تطبيق ثاني لعمال المستودع لتسجيل الطلبات</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> صلاحيات محدودة للموظفين</li>
           </ul>
           <a href="#download" class="price-cta">جرّبه مجاناً</a>
@@ -461,7 +460,7 @@
     <div class="wrap">
       <div class="section-head">
         <div class="section-kicker">التحميل</div>
-        <h2>جرّب جيستوك توّة، مجاناً 3 أيام</h2>
+        <h2>جرّب جيستوك الآن، مجاناً 3 أيام</h2>
         <p>حمّل النسخة، جرّبها في محلك الحقيقي، وادفع غير إذا عجبتك.</p>
       </div>
       <div class="download-ctas">
@@ -471,7 +470,7 @@
         </button>
         <button class="btn btn-ghost" id="cta-ios-2">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l-7-7 7-7M19 12H5"/></svg>
-          <span>طلب نسخة iOS<small>راسلنا للانضمام</small></span>
+          <span>طلب نسخة iOS<small>راسلنا على واتساب</small></span>
         </button>
       </div>
       <div class="download-counts">
@@ -502,9 +501,9 @@
   // ------------------------------------------------------------
   // CONFIG — update these three lines before publishing
   // ------------------------------------------------------------
-  var APPS_SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_URL_HERE"; // from Gestock-DownloadCounter-AppsScript.gs
+  var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz9lthnL8R7zDniKm453ZchowoczlYRbM8BZCDkx70lWDI13-iUf5V0_ESasX4VM9K4WA/exec";
   var ANDROID_APK_URL = "/downloads/gestock.apk";           // upload your .apk to this path in your Netlify site
-  var IOS_CONTACT_URL = "mailto:you@example.com?subject=" + encodeURIComponent("أريد نسخة iOS من جيستوك");
+  var IOS_CONTACT_URL = "https://wa.me/message/DHKDYYVIGIHVG1";
 
   var statAndroid = document.getElementById("stat-android");
   var statIos = document.getElementById("stat-ios");
